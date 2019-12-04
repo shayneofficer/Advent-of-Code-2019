@@ -50,7 +50,7 @@ fn main() {
                 intcode[result_position] = result;
             }
 
-            println!("{}", intcode[0]);
+            println!("{}", intcode[0]); // 2692315
         },
     }
 }
