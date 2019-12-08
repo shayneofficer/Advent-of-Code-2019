@@ -6,15 +6,13 @@ fn main() {
     let start = Instant::now();
     
     let input = fs::read_to_string("./input.txt")
-    .expect("Something went wrong");
+        .expect("Something went wrong");
     
     let wires: Vec<&str> = input.split('\n').collect();
     
     let wire_one: Vec<&str> = wires[0].trim().split(',').collect();
     let wire_two: Vec<&str> = wires[1].trim().split(',').collect();
     
-    // let mut steps: Vec<((i64, i64), i64)> = Vec::new();
-    // let mut intersections: Vec<((i64, i64), i64)> = Vec::new();
     let mut steps: HashMap<(i64, i64), u32> = HashMap::new();
     let mut intersections: HashMap<(i64, i64), u32> = HashMap::new();
     // (-994, 210), (-722, 274), (-290, -1036), (-277, -1036), (529, -582), (-3363, -4440)
@@ -74,5 +72,5 @@ fn main() {
     v.sort();
 
     println!("{}", v[0]); // 16524
-    println!("{}", start.elapsed().as_secs()); // 0
+    println!("{}", start.elapsed().as_secs()); // 0 - wow way more performant than puzzle 1 solution
 }

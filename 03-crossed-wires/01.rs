@@ -5,7 +5,7 @@ fn main() {
     let start = Instant::now();
     
     let input = fs::read_to_string("./input.txt")
-    .expect("Something went wrong");
+        .expect("Something went wrong");
     
     let wires: Vec<&str> = input.split('\n').collect();
     
