@@ -56,12 +56,12 @@ fn process_intcode(mut intcode: Vec<i32>) {
 
         if operation == "multiplication" {
             let operand_one = if opcode[2] == 0 
-            {intcode[intcode[curr + 1] as usize]}
-            else {intcode[curr + 1]};
+                {intcode[intcode[curr + 1] as usize]}
+                else {intcode[curr + 1]};
 
             let operand_two = if opcode[3] == 0 
-            {intcode[intcode[curr + 2] as usize]}
-            else {intcode[curr + 2]};
+                {intcode[intcode[curr + 2] as usize]}
+                else {intcode[curr + 2]};
 
             let result_position = intcode[curr + 3] as usize;
             intcode[result_position] = operand_one * operand_two;
